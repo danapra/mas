@@ -29,6 +29,7 @@
 
     <!-- BackPack Base CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/backpack/backpack.base.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/backpack/app/bootstrap.css') }}">
 
     @yield('after_styles')
 

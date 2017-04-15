@@ -175,6 +175,8 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class, 
         Backpack\PageManager\PageManagerServiceProvider::class,
         Backpack\MenuCRUD\MenuCRUDServiceProvider::class,
+        Backpack\NewsCRUD\NewsCRUDServiceProvider::class,
+
 
         /*
          * Application Service Providers...

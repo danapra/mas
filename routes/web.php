@@ -18,4 +18,5 @@
 Route::group(['prefix' => 'admin'], function ()
 {
 	Route::get('surat/masuk', ['as' => 'surat.masuk', 'uses' => 'SuratMasukController@index']);
+	Route::get('surat/keluar', ['as' => 'surat.keluar', 'uses' => 'SuratKeluarController@index']);
 });

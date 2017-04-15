@@ -21,6 +21,10 @@
           <!-- ================================================ -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 
+          <!-- Menu dapat diakses oleh siapa saja -->
+          <li><a href="{{ route('surat.masuk') }}"><i class="fa fa-dashboard"></i> <span>Surat Masuk</span></a></li>
+          <li><a href="{{ route('surat.keluar') }}"><i class="fa fa-dashboard"></i> <span>Surat Keluar</span></a></li>
+
 
       @hasrole('admin')
               <!-- Users, Roles Permissions -->
@@ -39,10 +43,10 @@
       <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/elfinder') }}"><i class="fa fa-files-o"></i> <span>File manager</span></a></li>
       @endhasrole
 
-
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
-          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-sign-out"></i> <span>{{ trans('backpack::base.logout') }}</span></a></li>
+          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-sign-out"></i>
+          <span>{{ trans('backpack::base.logout') }}</span></a></li>
         </ul>
       </section>
       <!-- /.sidebar -->

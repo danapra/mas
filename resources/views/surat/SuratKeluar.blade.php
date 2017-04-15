@@ -16,7 +16,7 @@
  
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h1 class="panel-title text-uppercase text-center"><strong>FORM UPLOAD SURAT MASUK</strong></h1>
+      <h1 class="panel-title text-uppercase text-center"><strong>FORM UPLOAD SURAT KELUAR</strong></h1>
     </div>
     <div class="panel-body">
       <label for="fileField">Pilih File : </label>

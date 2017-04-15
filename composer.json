@@ -10,6 +10,7 @@
         "backpack/base": "^0.7.16",
         "backpack/crud": "^3.2",
         "backpack/logmanager": "^2.3",
+        "backpack/newscrud": "^2.1",
         "backpack/pagemanager": "^1.1",
         "backpack/permissionmanager": "^2.1",
         "backpack/settings": "^2.0",
