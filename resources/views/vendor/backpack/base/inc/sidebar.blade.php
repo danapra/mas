@@ -24,6 +24,7 @@
           <!-- Menu dapat diakses oleh siapa saja -->
           <li><a href="{{ route('surat.masuk') }}"><i class="fa fa-dashboard"></i> <span>Surat Masuk</span></a></li>
           <li><a href="{{ route('surat.keluar') }}"><i class="fa fa-dashboard"></i> <span>Surat Keluar</span></a></li>
+          <li><a href="{{ route('surat.cari') }}"><i class="fa fa-dashboard"></i> <span>Pencarian</span></a></li>
 
 
       @hasrole('admin')
