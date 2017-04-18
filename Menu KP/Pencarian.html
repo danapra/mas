@@ -20,39 +20,29 @@
   <div class="panel-heading">
     <h1 class="panel-title text-uppercase text-center"><strong>pencarian surat</strong></h1>
   </div>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#">Pencarian</a></div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="inverseNavbar1">
-      <ul class="nav navbar-nav">
-        <li class="active"></li>
-        <li></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jenis Surat<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Surat Masuk</a></li>
-            <li><a href="#">Surat Keluar</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Nama Surat">
-          <input type="text" class="form-control" placeholder="Tag">
-        </div>
-        <button type="submit" class="btn btn-default">Cari</button>
-      </form>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
-</nav>
 <div class="panel-body">
-  <table width="95%" border="2">
-    <tbody>
+  <div style="width: 100%" class="col-xs-4 col-xs-offset-2 col-md-offset-0">
+    <div class="input-group">
+      <div class="input-group-btn search-panel">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter by</span> <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#contains">Contains</a></li>
+          <li><a href="#its_equal">It's equal</a></li>
+          <li><a href="#greather_than">Greather than ></a></li>
+          <li><a href="#less_than">Less than < </a></li>
+          <li class="divider"></li>
+          <li><a href="#all">Anything</a></li>
+        </ul>
+      </div>
+      <input type="hidden" name="search_param" value="all" id="search_param">
+      <input type="text" class="form-control" name="x" placeholder="Search term...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+      </span></div>
+  </div>
+</div>
+<table width="100%" border="2">
+  <tbody>
       <tr>
         <td width="29" align="center">NO</td>
         <td width="88" align="center">Nama User </td>
@@ -83,8 +73,8 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
       </tr>
-    </tbody>
-  </table> 
+  </tbody>
+</table> 
   <br>
 </div>
 <div class="panel-footer text-center"><strong>MAS (Mailing Administrator System)</strong></div>
