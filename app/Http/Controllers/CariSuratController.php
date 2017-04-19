@@ -9,6 +9,5 @@ class CariSuratController extends Controller
     public function index()
     {
     	return view('surat.CariSurat');
-		\\info
     }
 }
