@@ -20,7 +20,6 @@
           <!-- ==== Recommended place for admin menu items ==== -->
           <!-- ================================================ -->
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
-          <li><a href="{{ route('surat.masuk') }}"><i class="fa fa-dashboard"></i> <span>Surat masuk</span></a></li>
 
 
           <!-- ======================================= -->
