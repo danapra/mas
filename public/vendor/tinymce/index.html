@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TinyMCE - Setup</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<table width="175px" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+<tr align="center">
+      <td><label for="textarea2">Kepada Yth.</label> <br>
+      <textarea name="textarea" id="textarea"></textarea> <br>
+      <input type="button" name="button" id="button" value="Browser"></td>
+    </tr>
+  </tbody>
+</table> <br>
+<p>
+  <textarea class="tinymce"></textarea>
+		  
+		  <!-- javascript -->
+		  <script type="text/javascript" src="js/jquery.min.js"></script>
+		  <script type="text/javascript" src="plugin/tinymce/tinymce.min.js"></script>
+		  <script type="text/javascript" src="plugin/tinymce/init-tinymce.js"></script>
+    </p>
+		<form name="form1" method="post" action="">
+		  <p>&nbsp;</p>
+		  <table width="175" border="0" cellspacing="0" cellpadding="0">
+          	<tr>
+           	  <td align="center">
+                <p><label>Tanggal Surat</label></p>
+                </td>
+            </tr>
+		    <tr>
+		      <td align="center">
+              	<p>
+		    		<label for="textarea"></label>
+		    		<label for="textfield"></label>
+            		<input name="textfield" type="text" id="textfield" value="" placeholder="Surabaya,24-05-2017">
+		  		</p>
+          </td>
+	        </tr>
+		    <tr>
+		      <td align="center">
+              	<p>
+		      		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Signature Pad</button>
+		  		</p>
+              </td>
+	        </tr>
+		    <tr>
+		      <td align="center">
+                  <p>
+                    <label for="textarea"></label>
+                    <label for="textfield"></label>
+                    <input name="textfield" type="text" id="textfield" value="" placeholder="Nama Pengirim">
+                  </p>
+              </td>
+	        </tr>
+	      </table>  
+	</form>
+		<p>&nbsp;</p>
+	</body>
+<div class="container">
+  <!-- Trigger the modal with a button -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+</html>
