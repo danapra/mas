@@ -2,8 +2,12 @@ var wrapper = document.getElementById("signature-pad"),
     clearButton = wrapper.querySelector("[data-action=clear]"),
     savePNGButton = wrapper.querySelector("[data-action=save-png]"),
     saveSVGButton = wrapper.querySelector("[data-action=save-svg]"),
+    
     canvas = wrapper.querySelector("canvas"),
     signaturePad;
+
+var wrapper2 = document.getElementById("print-value"),
+    savePrintButton = wrapper2.querySelector("[data-action=save-print]");
 
 // Adjust canvas coordinate space taking into account pixel ratio,
 // to make it look crisp on mobile devices.
@@ -27,11 +31,36 @@ clearButton.addEventListener("click", function (event) {
     signaturePad.clear();
 });
 
+
+savePrintButton.addEventListener("click",function(event){
+      var isi = tinymce.activeEditor.getContent();
+      var kota = $('.kota').val();
+      var nama = $('.nama').val();
+      
+      var ttd ='';
+      if (signaturePad.isEmpty()) {
+          alert("Please provide signature first.");
+      } else {
+          // window.open(signaturePad.toDataURL());
+          ttd = '<img src="'+signaturePad.toDataURL()+'">';
+      }
+
+      var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<!DOCTYPE html><html><head><title></title></head><body>');
+            printWindow.document.write(kota);
+            printWindow.document.write(ttd);
+            printWindow.document.write(nama);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+    });
+
 savePNGButton.addEventListener("click", function (event) {
     if (signaturePad.isEmpty()) {
         alert("Please provide signature first.");
     } else {
-        window.open(signaturePad.toDataURL());
+        // window.open(signaturePad.toDataURL());
+        signaturePad.toDataURL()
     }
 });
 

@@ -10,4 +10,10 @@ class buatController extends Controller
     {
     	return view ('surat.BuatSurat');
     }
+
+    public function cetak(Request $request)
+    {
+    	dd($request->all());
+    	return view ('surat.BuatSurat');
+    }
 }

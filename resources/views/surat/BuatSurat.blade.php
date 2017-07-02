@@ -14,14 +14,13 @@
 	<body>
 <table width="175px" border="0" cellspacing="0" cellpadding="0">
   <tbody>
-<tr align="center">
+    <tr align="center" id="print-value">
       <td><input type="button" name="view" id="view" value="Preview"></td>
-      <td><input type="button" name="print" id="print" value="Print"></td>
+      <td><input type="button" name="print" id="print" data-action="save-print" value="Print"></td>
     </tr>
   </tbody>
 </table> <br>
-<p>
-  <textarea class="tinymce"></textarea>
+
 		  
 		  <!-- javascript -->
 <!-- 		  <script src="js/jquery.min.js"></script>
@@ -31,9 +30,11 @@
       <script src="{{ asset('vendor/tinymce') }}/plugin/tinymce/tinymce.min.js"></script>
       <script src="{{ asset('vendor/tinymce') }}/plugin/tinymce/init-tinymce.js"></script>
 
-    </p>
-		<form name="form1" method="post" action="">
-
+    
+		<form name="form1" method="get" action="{{route('surat.print')}}">
+      <p>
+  <textarea name="isi" class="tinymce"></textarea>
+  </p>
 		  <table width="175" border="0" cellspacing="0" cellpadding="0">
           	<tr>
            	  <td align="center">
@@ -44,9 +45,7 @@
 		    <tr>
 		      <td align="left">
               	<p>
-		    		<label for="textarea"></label>
-		    		<label for="textfield"></label>
-            		<input name="textfield" type="text" id="textfield" value="" placeholder="Surabaya,24-05-2017">
+            		<input name="kota" class="kota" type="text" id="textfield" value="" placeholder="Surabaya,24-05-2017">
 		  		</p>
           </td>
 	        </tr>
@@ -74,13 +73,38 @@
 		    <tr>
 		      <td align="left">
                   <p>
-                    <label for="textarea"></label>
-                    <label for="textfield"></label>
-                    <input name="textfield" type="text" id="textfield" value="" placeholder="Nama Pengirim">
+                    <input name="nama" class="nama" type="text" id="textfield" value="" placeholder="Nama Pengirim">
                   </p>
               </td>
+              <td><input type="submit" name="submit" id="view" value="submit"></td>
 	        </tr>
 	      </table>  
 	</form>
 
+  <script type="text/javascript">
+    var wrapper = document.getElementById("print-value");
+    // var savePrintButton = wrapper.querySelector("[data-action=save-print]");
+    // savePrintButton.addEventListener('click',function(){
+    //   var isi = tinymce.activeEditor.getContent();
+    //   var kota = $('.kota').val();
+    //   var nama = $('.nama').val();
+      
+    //   var ttd ='';
+    //   if (signaturePad.isEmpty()) {
+    //       alert("Please provide signature first.");
+    //   } else {
+    //       // window.open(signaturePad.toDataURL());
+    //       ttd = '<img src="'+signaturePad.toDataURL()+'">';
+    //   }
+
+    //   var printWindow = window.open('', '', 'height=400,width=800');
+    //         printWindow.document.write('<!DOCTYPE html><html><head><title></title></head><body>');
+    //         printWindow.document.write(kota);
+    //         printWindow.document.write(ttd);
+    //         printWindow.document.write(nama);
+    //         printWindow.document.write('</body></html>');
+    //         printWindow.document.close();
+    //         printWindow.print();
+    // });
+  </script>
 @endsection
