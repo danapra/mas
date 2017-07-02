@@ -1,10 +1,11 @@
 @extends('backpack::layout')
 
 @section('header')
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <script src="{{ asset('vendor/tinymce') }}/js/jquery.min.js"></script>
     <script src="{{ asset('vendor/tinymce') }}/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="{{ asset('vendor/signature/') }}/assets/jquery.signaturepad.css">
-
 
 @endsection
 
@@ -14,9 +15,8 @@
 <table width="175px" border="0" cellspacing="0" cellpadding="0">
   <tbody>
 <tr align="center">
-      <td><label for="textarea2">Kepada Yth.</label> <br>
-      <textarea name="textarea" id="textarea"></textarea> <br>
-      <input type="button" name="button" id="button" value="Browser"></td>
+      <td><input type="button" name="view" id="view" value="Preview"></td>
+      <td><input type="button" name="print" id="print" value="Print"></td>
     </tr>
   </tbody>
 </table> <br>
@@ -42,7 +42,7 @@
                 </td>
             </tr>
 		    <tr>
-		      <td align="center">
+		      <td align="left">
               	<p>
 		    		<label for="textarea"></label>
 		    		<label for="textfield"></label>
@@ -51,14 +51,28 @@
           </td>
 	        </tr>
 		    <tr>
-		      <td align="center">
-              	<p>
-		      		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Signature Pad</button>
-		  		</p>
+		      <td align="left">
+              <div onselectstart="return false">
+                        <div id="signature-pad" class="m-signature-pad">
+                          <div class="m-signature-pad--body">
+                            <canvas></canvas>
+                          </div>
+                          <div class="m-signature-pad--footer">
+                            <div class="description">Sign above</div>
+                            <div class="left">
+                              <button type="button" class="button clear" data-action="clear">Clear</button>
+                            </div>
+                            <div class="right">
+                              <button type="button" class="button save" data-action="save-png">Save as PNG</button>
+                              <button type="button" class="button save" data-action="save-svg">Save as SVG</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
               </td>
 	        </tr>
 		    <tr>
-		      <td align="center">
+		      <td align="left">
                   <p>
                     <label for="textarea"></label>
                     <label for="textfield"></label>
@@ -68,33 +82,5 @@
 	        </tr>
 	      </table>  
 	</form>
-
-<div class="sigPad" id="smoothed" style="width:404px;">
-<h2>Bezier Curves (constant pen width)</h2>
-<ul class="sigNav">
-<li class="drawIt"><a href="#draw-it" >Draw It</a></li>
-<li class="clearButton"><a href="#clear">Clear</a></li>
-</ul>
-<div class="sig sigWrapper" style="height:auto;">
-<div class="typed"></div>
-<canvas class="pad" width="400" height="250"></canvas>
-<input type="hidden" name="output-2" class="output">
-</div>
-</div>
-<button type="submit">I accept the terms of this agreement.</button>
-</form>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="{{ asset('vendor/signature/') }}/assets/numeric-1.2.6.min.js"></script> 
-<script src="{{ asset('vendor/signature/') }}/assets/bezier.js"></script> 
-<script src="{{ asset('vendor/signature/') }}/jquery.signaturepad.js"></script> 
-<script>
-$(document).ready(function() {
-// $('#linear').signaturePad({drawOnly:true, lineTop:200});
-$('#smoothed').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
-// $('#smoothed-variableStrokeWidth').signaturePad({drawOnly:true, drawBezierCurves:true, variableStrokeWidth:true, lineTop:200});
-});
-</script> 
-<script src="{{ asset('vendor/signature/') }}/assets/json2.min.js"></script>
 
 @endsection

@@ -16,7 +16,7 @@
     @yield('before_styles')
     
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/bootstrap/css/bootstrap.min.css">
+   <!--  <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/bootstrap/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -30,6 +30,9 @@
     <!-- BackPack Base CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/backpack/backpack.base.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/backpack/app/bootstrap.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/signature-pad.css') }}">
+
 
     @yield('after_styles')
 
@@ -111,6 +114,8 @@
     <script src="{{ asset('vendor/adminlte') }}/plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <script src="{{ asset('vendor/adminlte') }}/plugins/fastclick/fastclick.js"></script>
     <script src="{{ asset('vendor/adminlte') }}/dist/js/app.min.js"></script>
+    <script src="{{ asset('js/plugin/signature_pad.js') }}"></script>
+    <script src="{{ asset('js/plugin/app.js') }}"></script>
     
 
     <!-- page script -->
