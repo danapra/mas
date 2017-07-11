@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\PDF;
+use App;	
 
 class buatController extends Controller
 {
@@ -13,7 +15,12 @@ class buatController extends Controller
 
     public function cetak(Request $request)
     {
-    	dd($request->all());
-    	return view ('surat.BuatSurat');
+    	$data = $request->all();
+  //   	$html = 'asd';
+    	$pdf = App::make('dompdf.wrapper');
+		$pdf->loadView('print.index', ['data' => $data]);
+		return $pdf->download('saveme.pdf');
+		// $pdf = PDF::loadView('surat.BuatSurat'); return $pdf->download('namepdf');
+    	// return view ('surat.BuatSurat');
     }
 }

@@ -18,7 +18,7 @@
 Route::group(['middleware' => 'auth'], function ()
 {
 	Route::get('surat/buat', ['as' => 'surat.buat', 'uses' => 'buatController@index']);
-	Route::get('surat/print', ['as' => 'surat.print', 'uses' => 'buatController@cetak']);
+	Route::post('surat/print', ['as' => 'surat.print', 'uses' => 'buatController@cetak']);
 
 	Route::get('surat/masuk', ['as' => 'surat.masuk', 'uses' => 'SuratMasukController@index']);
     Route::get('surat/create', ['as' => 'surat.create', 'uses' => 'SuratMasukController@create']);
