@@ -15,7 +15,8 @@ class CreateSuratMasukTable extends Migration
     {
         Schema::create('surat_masuk', function (Blueprint $table)
         {
-            $table->integer('id')->increments();
+            // $table->integer('id')->increments();
+            $table->increments('id')->unsigned();
             $table->binary('image');
             $table->string('nama_surat');
             $table->dateTime('tanggal_surat');

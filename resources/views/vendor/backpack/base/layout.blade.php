@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="{{ asset('vendor/backpack/app/bootstrap.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/signature-pad.css') }}">
+  <!--   <link rel="stylesheet" href="{{ asset('css/reset.css') }}"> -->
+
 
 
     @yield('after_styles')
@@ -49,7 +51,7 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="{{ url('') }}" class="logo">
+        <a href="#" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini">{!! config('backpack.base.logo_mini') !!}</span>
           <!-- logo for regular state and mobile devices -->

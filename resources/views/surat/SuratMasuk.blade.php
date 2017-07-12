@@ -22,7 +22,7 @@
       <form method="post" action="{{ route('surat.store') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <label for="fileField">Pilih File : </label>
-        <input type="file" name="fileField" id="fileField"><br>
+        <input type="file" name="fileField" id="fileField"><p><i>max.700kb</i></p><br>
         <label for="textfield">Masukan Nama Surat :</label><br>
         <input type="text" name="textfield" id="textfield"><br><br>
         <label for="date">Tanggal Surat :</label><br>
