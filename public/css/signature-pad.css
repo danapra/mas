@@ -100,8 +100,89 @@ body {
   .right {
     right: 0;
   }
+@media only screen and (min-width:2000px){
+    .m-signature-pad {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    min-width: 350px;
+    min-height: 340px;
+    margin: 5%;
+  }
+  #github {
+    display: none;
+  }
+}
+@media only screen and (max-device-width:480px){
+    .m-signature-pad {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    min-width: 350px;
+    min-height: 340px;
+    margin: 5%;
+  }
+  #github {
+    display: none;
+  }
+}
+@media only screen and (device-width:768px){
+    .m-signature-pad {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    min-width: 350px;
+    min-height: 340px;
+    margin: 5%;
+  }
+  #github {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+    .m-signature-pad {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    min-width: 350px;
+    min-height: 340px;
+    margin: 5%;
+  }
+  #github {
+    display: none;
+  }
+}
 
-@media screen and (max-width: 1366px) {
+@media only screen and (min-width:960px){
+  .m-signature-pad {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    min-width: 350px;
+    min-height: 340px;
+    margin: 5%;
+  }
+  #github {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:1440px){
   .m-signature-pad {
     top: 0;
     left: 0;
@@ -136,6 +217,12 @@ body {
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .m-signature-pad {
+    margin: 10%;
+  }
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .m-signature-pad {
     margin: 10%;
   }

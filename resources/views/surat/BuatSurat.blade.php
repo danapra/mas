@@ -12,14 +12,7 @@
 @section('content')
 <div>
 	<body>
-<table width="175px" border="0" cellspacing="0" cellpadding="0">
-  <tbody>
-    <tr align="center" id="print-value">
-      <td><input type="button" name="view" id="view" value="Preview"></td>
-      <td><input type="button" name="print" id="print" data-action="save-print" value="Print"></td>
-    </tr>
-  </tbody>
-</table> <br>
+
 
 		  
 		  <!-- javascript -->
@@ -36,15 +29,16 @@
       <p>
   <textarea name="isi" class="tinymce"></textarea>
   </p>
+  <table align="center" width="175px" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr align="center" id="print-value">
+        <td><input type="submit" name="submit" id="view" value="Download"></td>
+        <td><input type="button" name="print" id="print" data-action="save-print" value="Print"></td>
+      </tr>
+    </tbody>
+  </table> <br>
 		  <table width="175" border="0" cellspacing="0" cellpadding="0">
-          	<tr>
-           	  <td align="center">
-                <!-- <p><label>Tanggal Surat</label></p> -->
-                
-                </td>
-            </tr>
-		    <tr>
-		      <td align="left">
+		      <td align="center">
               	<p>
             		<input name="kota" class="kota" type="text" id="textfield" value="" placeholder="Surabaya,24-05-2017">
 		  		</p>
@@ -63,8 +57,7 @@
                               <button type="button" class="button clear" data-action="clear">Clear</button>
                             </div>
                             <div class="right">
-                              <button type="button" class="button save" data-action="save-png">Save as PNG</button>
-                              <button type="button" class="button save" data-action="save-svg">Save as SVG</button>
+                              <button type="button" class="button save" data-action="save-png">Apply</button>
                             </div>
                           </div>
                         </div>
@@ -72,14 +65,13 @@
               </td>
 	        </tr>
 		    <tr>
-		      <td align="left">
+		      <td align="center">
                   <p>
                     <input name="nama" class="nama" type="text" id="textfield" value="" placeholder="Nama Pengirim">
                   </p>
               </td>
               <td>
                 <input type="hidden" name="ttd" id="ttd" value="">
-                <input type="submit" name="submit" id="view" value="submit"></td>
 	        </tr>
 	      </table>  
 	</form>
@@ -88,9 +80,10 @@
     var wrapper = document.getElementById("print-value");
     var savePrintButton = wrapper.querySelector("[data-action=save-print]");
     savePrintButton.addEventListener('click',function(){
-      var isi = tinymce.activeEditor.getContent();
-      var kota = $('.kota').val();
-      var nama = $('.nama').val();
+    var isi = tinymce.activeEditor.getContent();
+    var kota = $('.kota').val();
+    var nama = $('.nama').val();
+    var kop = '<img src="{{ asset('image/kop.jpg') }}">';
       
       var ttd ='';
       if (signaturePad.isEmpty()) {
@@ -100,8 +93,10 @@
           ttd = '<img src="'+signaturePad.toDataURL()+'">';
       }
 
-      var printWindow = window.open('', '', 'height=400,width=800');
+      var printWindow = window.open('', '', 'size: 7in 9.25in');
             printWindow.document.write('<!DOCTYPE html><html><head><title></title></head><body>');
+            printWindow.document.write(kop);
+            printWindow.document.write('<br>');
             printWindow.document.write(isi);
             printWindow.document.write('<br>');
             printWindow.document.write(kota);
