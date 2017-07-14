@@ -16,7 +16,7 @@
 
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h1 class="panel-title text-uppercase text-center"><strong>INDEX SURAT MASUK</strong></h1>
+      <h1 class="panel-title text-uppercase text-center"><strong>INDEX SURAT KELUAR</strong></h1>
     </div>
     <div class="panel-body">
       <nav class="navbar navbar-default">
@@ -25,11 +25,11 @@
     <div class="navbar-header" style="margin-top: 8px">
       
       <div class="col-xs-12">
-        <form class="navbar-form navbar-left" role="search" action="{{route('surat.masuk')}}">  
+        <form class="navbar-form navbar-left" role="search" action="{{route('surat.keluar')}}">  
         
           <div class="form-group row align-items-center">
             <div class="col-9">
-              <a class="btn btn-primary" href="{{route('surat.create')}}" name="upload">Upload</a> 
+              <a class="btn btn-primary" href="{{route('surat.create2')}}" name="upload">Upload</a> 
               <input type="text" class="form-control" placeholder="Search" name="cari">
               <button type="submit" class="btn btn-default" name="submit">Submit</button>
             </div>
@@ -71,7 +71,7 @@
        <td>{{ $d-> keterangan }}</td>
        <td><a href="{{ $d-> image}}" download="filename.{{ $d-> mime}}">Download</a></td>
        @hasrole('admin')
-       <td><a href="{{route('surat.delete',$d->id)}}">Delete</a></td>
+       <td><a href="{{route('surat.delete2',$d->id)}}">Delete</a></td>
        @endhasrole
       </tr>
        @endforeach

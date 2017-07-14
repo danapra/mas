@@ -71,21 +71,14 @@
                         <div class="form-group">
                             <label class="col-md-4 fa fa-phone" style="text-align: right; margin-top: 4px"><strong>  TELP KANTOR</strong></label>
                             <div class="col-md-6">
-                                <strong>isi Nomor Telp</strong>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-md-4 fa fa-whatsapp" style="text-align: right; margin-top: 4px"><strong>  WHATSAPP</strong></label>
-                            <div class="col-md-6">
-                                <strong>isi No Whatsapp</strong>
+                                <strong>031 592 1516</strong>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 fa fa-at" style="text-align: right; margin-top: 4px"><strong>  E-MAIL</strong></label>
                             <div class="col-md-6">
-                                <strong>isi Email</strong>
+                                <strong>teknik@untag-sby.ac.id</strong>
                             </div>
                         </div>
 

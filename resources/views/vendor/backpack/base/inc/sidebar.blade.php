@@ -22,9 +22,9 @@
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 
           <!-- Menu dapat diakses oleh siapa saja -->
-          <li><a href="{{ route('surat.buat') }}"><i class="fa fa-dashboard"></i> <span>Buat Surat</span></a></li>
-          <li><a href="{{ route('surat.masuk') }}"><i class="fa fa-dashboard"></i> <span>Surat Masuk</span></a></li>
-          <li><a href="{{ route('surat.keluar') }}"><i class="fa fa-dashboard"></i> <span>Surat Keluar</span></a></li>
+          <li><a href="{{ route('surat.buat') }}"><i class="fa fa-file-word-o"></i> <span>Buat Surat</span></a></li>
+          <li><a href="{{ route('surat.masuk') }}"><i class="fa fa-envelope-open"></i> <span>Surat Masuk</span></a></li>
+          <li><a href="{{ route('surat.keluar') }}"><i class="fa fa-envelope"></i> <span>Surat Keluar</span></a></li>
 
 
       @hasrole('admin')
