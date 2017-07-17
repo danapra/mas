@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	{{$data['isi']}}
+	{{strip_tags($data['isi'])}}
 	{{$data['kota']}}
 	<img src="{{$data['ttd']}}">
 	{{$data['nama']}}

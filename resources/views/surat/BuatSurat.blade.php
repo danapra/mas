@@ -33,47 +33,44 @@
     <tbody>
       <tr align="center" id="print-value">
         <td><input type="submit" name="submit" id="view" value="Download"></td>
-        <td><input type="button" name="print" id="print" data-action="save-print" value="Print"></td>
+        <!-- <td><input type="button" name="print" id="print" data-action="save-print" value="Print"></td> -->
       </tr>
-    </tbody>
-  </table> <br>
-		  <table width="175" border="0" cellspacing="0" cellpadding="0">
-		      <td align="center">
+    </tbody></table>
+<!--   </table> <br>
+		  <table width="200" border="0" cellspacing="0" cellpadding="0">
+		      <td align="left">
               	<p>
             		<input name="kota" class="kota" type="text" id="textfield" value="" placeholder="Surabaya,24-05-2017">
 		  		</p>
           </td>
-	        </tr>
-		    <tr>
-		      <td align="left">
-              <div onselectstart="return false">
-                        <div id="signature-pad" class="m-signature-pad">
-                          <div class="m-signature-pad--body">
-                            <canvas></canvas>
-                          </div>
-                          <div class="m-signature-pad--footer">
-                            <div class="description">Sign above</div>
-                            <div class="left">
-                              <button type="button" class="button clear" data-action="clear">Clear</button>
-                            </div>
-                            <div class="right">
-                              <button type="button" class="button save" data-action="save-png">Apply</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-              </td>
-	        </tr>
-		    <tr>
-		      <td align="center">
+          <td><p>       </p></td>
+		      <td align="right">
                   <p>
                     <input name="nama" class="nama" type="text" id="textfield" value="" placeholder="Nama Pengirim">
                   </p>
               </td>
               <td>
                 <input type="hidden" name="ttd" id="ttd" value="">
-	        </tr>
-	      </table>  
+	      </table> -->
+          <div style="margin-top: 2%"><input name="kota" class="kota" type="text" id="textfield" value="" placeholder="Surabaya,24-05-2017"></div>
+          <div style="margin-top: 2%"><input name="nama" class="nama" type="text" id="textfield" value="" placeholder="Nama Pengirim"></div>
+          <div><input type="hidden" name="ttd" id="ttd" value=""></div>
+          <div onselectstart="return false" style="margin-top: 1%">
+                <div id="signature-pad" class="m-signature-pad">
+                  <div class="m-signature-pad--body">
+                    <canvas></canvas>
+                  </div>
+                  <div class="m-signature-pad--footer">
+                    <div class="description">Sign above</div>
+                    <div class="left">
+                      <button type="button" class="button clear" data-action="clear">Clear</button>
+                    </div>
+                    <div class="right">
+                      <button type="button" class="button save" data-action="save-png">Apply</button>
+                    </div>
+                  </div>
+                </div>
+              </div>  
 	</form>
 
   <script type="text/javascript">
@@ -83,7 +80,6 @@
     var isi = tinymce.activeEditor.getContent();
     var kota = $('.kota').val();
     var nama = $('.nama').val();
-    var kop = '<img src="{{ asset('image/kop.jpg') }}">';
       
       var ttd ='';
       if (signaturePad.isEmpty()) {
@@ -95,7 +91,6 @@
 
       var printWindow = window.open('', '', 'size: 7in 9.25in');
             printWindow.document.write('<!DOCTYPE html><html><head><title></title></head><body>');
-            printWindow.document.write(kop);
             printWindow.document.write('<br>');
             printWindow.document.write(isi);
             printWindow.document.write('<br>');
@@ -108,6 +103,6 @@
             printWindow.document.close();
             printWindow.focus();
             printWindow.print();
-    });
+};
   </script>
 @endsection

@@ -100,7 +100,105 @@ body {
   .right {
     right: 0;
   }
-@media only screen and (min-width:2000px){
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)
+{
+   .m-signature-pad 
+   { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; min-width: 350px; min-height: 340px; margin: 5%; } 
+   #github { display: none; } }
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+   .m-signature-pad { top: 0; left: 0; right: 0; bottom: 0; width: auto; height: auto; max-width: 284px; min-height: 340px; margin: 5%; } #github { display: none; } }
+
+
+
+
+/*@media only screen and (min-width:2000px){
     .m-signature-pad {
     top: 0;
     left: 0;
@@ -156,9 +254,10 @@ body {
     bottom: 0;
     width: auto;
     height: auto;
-    min-width: 350px;
+    min-width: 315px;
     min-height: 340px;
-    margin: 5%;
+    margin: 2%;
+    margin-bottom: 5%;
   }
   #github {
     display: none;
@@ -197,7 +296,7 @@ body {
   #github {
     display: none;
   }
-}
+}*/
 
 @media screen and (max-width: 1024px) {
   .m-signature-pad {
@@ -207,9 +306,11 @@ body {
     bottom: 0;
     width: auto;
     height: auto;
-    min-width: 350px;
+    min-width: 318px;
     min-height: 340px;
-    margin: 5%;
+    margin: -5%;
+    margin-top: 0%;
+    margin-bottom: 5%;
   }
   #github {
     display: none;
@@ -247,3 +348,4 @@ body {
       margin-top: 1em;
     }
 }
+
